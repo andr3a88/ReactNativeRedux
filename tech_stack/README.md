@@ -1,6 +1,6 @@
 ### Introduction to REDUX
 
-+ Libraries: `react-redux` and `redux`
++ Libraries: `react-redux` (binding between redux e react) and `redux`
 + Store: createStore(reducers)
 + Reducer: combineReducers
 + Action and action creator
