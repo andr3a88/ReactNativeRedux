@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import AuthReducer from './AuthReducer';
-//import EmployeeFormReducer from './EmployeeFormReducer';
+import EmployeeFormReducer from './EmployeeFormReducer';
 //import EmployeeReducer from './EmployeeReducer';
 
 
@@ -11,5 +11,7 @@ import AuthReducer from './AuthReducer';
 // different reducing functions into a single reducing function you can pass 
 // to createStore.
 export default combineReducers({
-    auth: AuthReducer
+    auth: AuthReducer,
+    employeeForm: EmployeeFormReducer,
+    employees: null
 });
