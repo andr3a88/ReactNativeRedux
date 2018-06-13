@@ -3,9 +3,8 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './reducers';
 import firebase from 'firebase';
-import LoginForm from './components/LoginForm';
-
 import Router from './Router';
+import FirebaseConfiguration from '../Configuration';
 
 // middleware
 import ReduxThunk from 'redux-thunk';
@@ -15,16 +14,7 @@ class App extends Component {
     constructor() {
         super();
 
-        // Firebase config
-        const config = {
-            apiKey: 'AIzaSyC3q29WIKS8cKUThM3wswWpSU0XanOwr8Y',
-            authDomain: 'manager-92082.firebaseapp.com',
-            databaseURL: 'https://manager-92082.firebaseio.com',
-            projectId: 'manager-92082',
-            storageBucket: '',
-            messagingSenderId: '395536676680'
-        };
-        firebase.initializeApp(config);
+        firebase.initializeApp(FirebaseConfiguration);
     }
 
     render() {
